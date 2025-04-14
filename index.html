@@ -1,0 +1,65 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>弹出窗口</title>  
+<meta charset="utf-8">  
+<style type="text/css">  
+.alert-win{  
+  position: fixed;  
+  top:0;  
+  right:0;  
+  bottom:0;  
+  left:0;  
+  z-index: 999;  
+  background-color: rgba(0,0,255,0.5);  
+}  
+.alert-win>div{  
+  width:300px;  
+  height:200px;  
+  background: linear-gradient(to right bottom,#ff0,#f00);  
+  border-radius: 20px;  
+  position: absolute;  
+  left:50%;  
+  top:50%;  
+  margin: -100px 0 0 -150px;  
+}  
+.alert-win>div>b{  
+  box-sizing: border-box;  
+  width:40px;  
+  height:40px;  
+  line-height: 40px;  
+  text-align:center;  
+  color:#0f0;  
+  border:4px double #0f0;  
+  border-radius:50%;  
+  float: right;  
+  margin-right:-20px;  
+  cursor: pointer;  
+}  
+.alert-win>div>div{  
+  padding:20px;  
+}  
+</style>  
+</head>  
+<body>  
+<div class="alert-win" id="aw1">
+  <div>
+    <b>×</b>
+    <div><b>欢迎来到我的个人主页！转载请征得本人同意哦！</b></div>
+  </div>
+</div>  
+<div>个人主页内容。</div>  
+<script type="text/javascript">  
+<!--  
+function My$(cssSel){  
+  return document.querySelector(cssSel);  
+}  
+var aw1 = My$("#aw1");  
+var b = My$("#aw1>div>b");  
+b.onclick = function(){  
+  aw1.style.display = "none";  
+};  
+//-->  
+</script>  
+</body>  
+</html>
